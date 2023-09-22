@@ -8,14 +8,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 const Index = () => {
     return (
-        <div>
-            <BrowserRouter>
+        <div>          
                 <NewCollection />
                 <DiscoveryCollection />
                 <PopularProducts />
                 <MostRated />
-                <NewShoes />
-            </BrowserRouter>
+                <NewShoes />          
         </div>
     )
 }
