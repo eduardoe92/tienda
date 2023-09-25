@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const ShoppingCart = () => {
 
@@ -119,7 +120,7 @@ export const ShoppingCart = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <button className="btn btn-primary btn-lg btn-block" onClick={() => window.location.href = 'checkout.html'}>Proceed To Checkout</button>
+                                        <button className="btn btn-primary btn-lg btn-block" onClick={() => window.location.href = "checkout"}>Proceed To Checkout</button>
                                     </div>
                                 </div>
                             </div>

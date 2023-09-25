@@ -5,6 +5,7 @@ import Index from './components/Index';
 import { Footer } from './components/Footer';
 import { ShoppingCart } from './components/Cart';
 import { ContactForm } from './components/Contact';
+import CheckoutForm from './components/Checkout';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path={"/"} element={<Index />} />
         <Route path={"/contact"} element={<ContactForm />} />
         <Route path={"/shopping"} element={<ShoppingCart />} />
+        <Route path={"/checkout"} element={<CheckoutForm />} />
       </Routes>
       <Footer />
     </div>
