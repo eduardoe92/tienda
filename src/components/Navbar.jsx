@@ -10,8 +10,7 @@ export const Navbar = () => {
 
     return (
 
-        <div className="site-navbar bg-white py-2">
-
+        <div className="site-navbar bg-white py-2" >
             <div className="search-wrap">
                 <div className="container">
                     <a href="/" className="search-close js-search-close"><span className="icon-close2"></span></a>
@@ -20,7 +19,6 @@ export const Navbar = () => {
                     </form>
                 </div>
             </div>
-
             <div className="container">
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="logo">
@@ -47,10 +45,10 @@ export const Navbar = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="/">Shop</a></li>
-                                <li><a href="/">Catalogue</a></li>
-                                <li><a href="/">New Arrivals</a></li>
-                                <li><Link to="/contact">Contact</Link></li>
+                                <li><a href="/">Tienda</a></li>
+                                <li><a href="/">Catalogo</a></li>
+                                <li><a href="/">Nuevo</a></li>
+                                <li><Link to="/contact">Contacto</Link></li>
                             </ul>
                         </nav>
                     </div>

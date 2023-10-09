@@ -8,6 +8,7 @@ import { ContactForm } from './components/Contact';
 import CheckoutForm from './components/Checkout';
 import CategoryPage from './components/CategoryPage';
 import { CartProvider } from './components/CartContext';
+import ScrollToTop from './components/Helpers';
 
 export const CartContext = createContext();
 
@@ -23,17 +24,18 @@ function App() {
   return (
     <div>
       <CartProvider>
-      <CartContext.Provider value={{ cart, addToCart }}>
-        <Navbar />
-        <Routes>
-          <Route exact path={"/"} element={<Index cart={cart} addToCart={addToCart} />} />
-          <Route path={"/contact"} element={<ContactForm />} />
-          <Route path={"/shopping"} element={<ShoppingCart />} />
-          <Route path={"/checkout"} element={<CheckoutForm />} />
-          <Route path={"/categoria/:category"} element={<CategoryPage />} />
-        </Routes>
-        <Footer />
-      </CartContext.Provider>
+        <CartContext.Provider value={{ cart, addToCart }}>
+          <ScrollToTop/>
+          <Navbar />
+          <Routes>
+            <Route exact path={"/"} element={<Index cart={cart} addToCart={addToCart} />} />
+            <Route path={"/contact"} element={<ContactForm />} />
+            <Route path={"/shopping"} element={<ShoppingCart />} />
+            <Route path={"/checkout"} element={<CheckoutForm />} />
+            <Route path={"/categoria/:category"} element={<CategoryPage />} />
+          </Routes>
+          <Footer />
+        </CartContext.Provider>
       </CartProvider>
     </div>
   );
