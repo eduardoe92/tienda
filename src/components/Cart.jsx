@@ -57,8 +57,8 @@ const ShoppingCart = () => {
         <div className="site-section">
             <div className="container">
                 <div className="row mb-5">
-                    <div className="col-md-12">
-                        <h2 className="text-black h3">Carrito de Compras</h2>
+                    <div className="title-section mb-5 col-12">
+                        <h2 className="text-uppercase">Carrito de Compras</h2>
                     </div>
                 </div>
                 <div className="row">

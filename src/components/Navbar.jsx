@@ -32,7 +32,7 @@ export const Navbar = () => {
                         <nav className="site-navigation text-right text-md-center" role="navigation">
                             <ul className="site-menu js-clone-nav d-none d-lg-block">
                                 <li className="has-children active">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <ul className="dropdown">
                                         <li><a href="/">Menu One</a></li>
                                         <li><a href="/">Menu Two</a></li>
@@ -47,7 +47,7 @@ export const Navbar = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="/">Shop</a></li>
                                 <li><a href="/">Catalogue</a></li>
                                 <li><a href="/">New Arrivals</a></li>
                                 <li><Link to="/contact">Contact</Link></li>

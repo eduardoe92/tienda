@@ -17,7 +17,9 @@ const CategoryPage = () => {
 
     return (
         <div className="container">
-            <h2>{categoryParam}</h2>
+            <div className="title-section mb-5 col-12">
+                <h2 className="text-uppercase">{categoryParam}</h2>
+            </div>
             <div className="row">
                 {categoryProducts.map((product) => (
                     <div key={product.id} className="col-lg-4 col-md-6 item-entry mb-4">
