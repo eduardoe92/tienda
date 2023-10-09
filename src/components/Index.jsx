@@ -5,13 +5,13 @@ import PopularProducts from './PopularProducts';
 import MostRated from './MostRated';
 import NewShoes from './NewShoes';
 
-const Index = () => {
+const Index = ({ cart, addToCart }) => {
     return (
         <div>          
                 <NewCollection />
                 <DiscoveryCollection />
-                <PopularProducts />
-                <MostRated />
+                <PopularProducts cart={cart} addToCart={addToCart} />
+                <MostRated cart={cart} addToCart={addToCart}/>
                 <NewShoes />          
         </div>
     )

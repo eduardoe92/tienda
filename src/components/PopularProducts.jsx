@@ -1,75 +1,42 @@
-import React from 'react'
+import React from 'react';
+import Products from './Products';
 
-const PopularProducts = () => {
+const PopularProducts = ({ addToCart }) => {
+    const popularProducts = Products.slice(0, 6);
+
     return (
         <div className="site-section">
             <div className="container">
                 <div className="row">
                     <div className="title-section mb-5 col-12">
-                        <h2 className="text-uppercase">Popular Products</h2>
+                        <h2 className="text-uppercase">Nuestros Productos más Populares</h2>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4 col-md-6 item-entry mb-4">
-                        <a href="#" className="product-item md-height bg-gray d-block">
-                            <img src="images/prod_2.png" alt="Image" className="img-fluid" />
-                        </a>
-                        <h2 className="item-title"><a href="#">Gray Shoe</a></h2>
-                        <strong className="item-price">$20.00</strong>
-                    </div>
-                    <div className="col-lg-4 col-md-6 item-entry mb-4">
-                        <a href="#" className="product-item md-height bg-gray d-block">
-                            <img src="images/prod_3.png" alt="Image" className="img-fluid" />
-                        </a>
-                        <h2 className="item-title"><a href="#">Blue Shoe High Heels</a></h2>
-                        <strong className="item-price"><del>$46.00</del> $28.00</strong>
-                    </div>
-                    <div className="col-lg-4 col-md-6 item-entry mb-4">
-                        <a href="#" className="product-item md-height bg-gray d-block">
-                            <img src="images/model_5.png" alt="Image" className="img-fluid" />
-                        </a>
-                        <h2 className="item-title"><a href="#">Denim Jacket</a></h2>
-                        <strong className="item-price"><del>$46.00</del> $28.00</strong>
-                        <div className="star-rating">
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
+                    {popularProducts.map((product) => (
+                        <div key={product.id} className="col-lg-4 col-md-6 item-entry mb-4">
+                            <a href="/" className="product-item md-height bg-gray d-block">
+                                <img src={product.image} alt="ImageProduct" className="img-fluid" />
+                            </a>
+                            <div className="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h2 className="item-title"><a href="/">{product.name}</a></h2>
+                                    {product.discountPrice ? (
+                                        <strong className="item-price">
+                                            <del>${product.discountPrice.toFixed(2)}</del> ${product.price.toFixed(2)}
+                                        </strong>
+                                    ) : (
+                                        <strong className="item-price">${product.price.toFixed(2)}</strong>
+                                    )}
+                                </div>
+                                <button className="btn btn-primary" onClick={() => addToCart(product)}>Agregar</button>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 item-entry mb-4">
-                        <a href="#" className="product-item md-height bg-gray d-block">
-                            <img src="images/prod_1.png" alt="Image" className="img-fluid" />
-                        </a>
-                        <h2 className="item-title"><a href="#">Leather Green Bag</a></h2>
-                        <strong className="item-price"><del>$46.00</del> $28.00</strong>
-                        <div className="star-rating">
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                            <span className="icon-star2 text-warning"></span>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 item-entry mb-4">
-                        <a href="#" className="product-item md-height bg-gray d-block">
-                            <img src="images/model_1.png" alt="Image" className="img-fluid" />
-                        </a>
-                        <h2 className="item-title"><a href="#">Smooth Cloth</a></h2>
-                        <strong className="item-price"><del>$46.00</del> $28.00</strong>
-                    </div>
-                    <div className="col-lg-4 col-md-6 item-entry mb-4">
-                        <a href="#" className="product-item md-height bg-gray d-block">
-                            <img src="images/model_7.png" alt="Image" className="img-fluid" />
-                        </a>
-                        <h2 className="item-title"><a href="#">Yellow Jacket</a></h2>
-                        <strong className="item-price">$58.00</strong>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default PopularProducts
+export default PopularProducts;

@@ -1,25 +1,43 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import Index from './components/Index';
-import { Footer } from './components/Footer';
-import { ShoppingCart } from './components/Cart';
+import Footer from './components/Footer';
+import ShoppingCart from './components/Cart';
 import { ContactForm } from './components/Contact';
 import CheckoutForm from './components/Checkout';
+import CategoryPage from './components/CategoryPage';
+import { CartProvider } from './components/CartContext';
+
+export const CartContext = createContext();
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    const updatedCart = [...cart];
+    updatedCart.push(product);
+    setCart(updatedCart);
+  };
+
   return (
     <div>
-      <Navbar />
-      <Routes>
-        <Route exact path={"/"} element={<Index />} />
-        <Route path={"/contact"} element={<ContactForm />} />
-        <Route path={"/shopping"} element={<ShoppingCart />} />
-        <Route path={"/checkout"} element={<CheckoutForm />} />
-      </Routes>
-      <Footer />
+      <CartProvider>
+      <CartContext.Provider value={{ cart, addToCart }}>
+        <Navbar />
+        <Routes>
+          <Route exact path={"/"} element={<Index cart={cart} addToCart={addToCart} />} />
+          <Route path={"/contact"} element={<ContactForm />} />
+          <Route path={"/shopping"} element={<ShoppingCart />} />
+          <Route path={"/checkout"} element={<CheckoutForm />} />
+          <Route path={"/categoria/:category"} element={<CategoryPage />} />
+        </Routes>
+        <Footer />
+      </CartContext.Provider>
+      </CartProvider>
     </div>
   );
 }
+
 
 export default App;
