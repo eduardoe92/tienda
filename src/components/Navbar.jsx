@@ -13,9 +13,9 @@ export const Navbar = () => {
         <div className="site-navbar bg-white py-2" >
             <div className="search-wrap">
                 <div className="container">
-                    <a href="/" className="search-close js-search-close"><span className="icon-close2"></span></a>
+                    <Link to="/" className="search-close js-search-close"><span className="icon-close2"></span></Link>
                     <form action="/" method="post">
-                        <input type="text" className="form-control" placeholder="Search keyword and hit enter..." />
+                        <input type="text" className="form-control" placeholder="Ingresa acá lo que deseas buscar..." />
                     </form>
                 </div>
             </div>
@@ -30,36 +30,36 @@ export const Navbar = () => {
                         <nav className="site-navigation text-right text-md-center" role="navigation">
                             <ul className="site-menu js-clone-nav d-none d-lg-block">
                                 <li className="has-children active">
-                                    <a href="/">Home</a>
+                                    <Link to="/">Home</Link>
                                     <ul className="dropdown">
-                                        <li><a href="/">Menu One</a></li>
-                                        <li><a href="/">Menu Two</a></li>
-                                        <li><a href="/">Menu Three</a></li>
+                                        <li><Link to="/">Menu One</Link></li>
+                                        <li><Link to="/">Menu Two</Link></li>
+                                        <li><Link to="/">Menu Three</Link></li>
                                         <li className="has-children">
-                                            <a href="/">Sub Menu</a>
+                                            <Link to="/">Sub Menu</Link>
                                             <ul className="dropdown">
-                                                <li><a href="/">Menu One</a></li>
-                                                <li><a href="/">Menu Two</a></li>
-                                                <li><a href="/">Menu Three</a></li>
+                                                <li><Link to="/">Menu One</Link></li>
+                                                <li><Link to="/">Menu Two</Link></li>
+                                                <li><Link to="/">Menu Three</Link></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="/">Tienda</a></li>
-                                <li><a href="/">Catalogo</a></li>
-                                <li><a href="/">Nuevo</a></li>
+                                <li><Link to="/">Tienda</Link></li>
+                                <li><Link to="/">Catalogo</Link></li>
+                                <li><Link to="/">Nuevo</Link></li>
                                 <li><Link to="/contact">Contacto</Link></li>
                             </ul>
                         </nav>
                     </div>
                     <div className="icons">
-                        <a href="/" className="icons-btn d-inline-block js-search-open"><span className="icon-search"></span></a>
-                        <a href="/" className="icons-btn d-inline-block"><span className="icon-heart-o"></span></a>
+                        <Link to="/" className="icons-btn d-inline-block js-search-open"><span className="icon-search"></span></Link>
+                        <Link to="/" className="icons-btn d-inline-block"><span className="icon-heart-o"></span></Link>
                         <Link to="/shopping" className="icons-btn d-inline-block bag">
                             <span className="icon-shopping-bag"></span>
                             <span className="number">{cart.length}</span>
                         </Link>
-                        <a href="/" className="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span className="icon-menu"></span></a>
+                        <a href="#" className="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span className="icon-menu"></span></a>
                     </div>
                 </div>
             </div>

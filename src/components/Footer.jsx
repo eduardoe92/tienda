@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function getCurrentDate() {
@@ -21,11 +22,11 @@ const PromoSection = () => {
     return (
         <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
             <h3 className="footer-heading mb-4">Promo</h3>
-            <a href="/" className="block-6">
+            <Link to="/" className="block-6">
                 <img src="images/about_1.jpg" alt="Img" className="img-fluid rounded mb-4" />
                 <h3 className="font-weight-light  mb-0">Encuentra las mejores ofertas del día</h3>
-                <p>Promoción válida solo el: {currentDate}</p>
-            </a>
+                <p>Promoción válida solo para el día: <br/> {currentDate}</p>
+            </Link>
         </div>
     );
 };
@@ -38,20 +39,20 @@ const QuickLinksSection = () => (
             </div>
             <div className="col-md-6 col-lg-4">
                 <ul className="list-unstyled">
-                    <li><a href="/">Carrito de compras</a></li>
-                    <li><a href="/">Tienda</a></li>
+                    <li><Link to="/shopping">Carrito de compras</Link></li>
+                    <li><Link to="/">Tienda</Link></li>
                 </ul>
             </div>
             <div className="col-md-6 col-lg-4">
                 <ul className="list-unstyled">
-                    <li><a href="/">Comercio movil</a></li>
-                    <li><a href="/">Envío directo</a></li>
+                    <li><Link to="/">Comercio movil</Link></li>
+                    <li><Link to="/">Envío directo</Link></li>
                 </ul>
             </div>
             <div className="col-md-6 col-lg-4">
                 <ul className="list-unstyled">
-                    <li><a href="/">Punto de venta</a></li>
-                    <li><a href="/">Vender en linea</a></li>
+                    <li><Link to="/">Punto de venta</Link></li>
+                    <li><Link to="/">Vender en linea</Link></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +65,7 @@ const ContactInfoSection = () => (
             <h3 className="footer-heading mb-4">Información de contacto</h3>
             <ul className="list-unstyled">
                 <li className="address">Av. 9 de Julio, Ciudad Autónoma de Buenos Aires, Argentina</li>
-                <li className="phone"><a href="tel://23923929210">+54 11 2345 6789</a></li>
+                <li className="phone"><Link to="tel://23923929210">+54 11 2345 6789</Link></li>
                 <li className="email">contact@shopmax.com</li>
             </ul>
         </div>

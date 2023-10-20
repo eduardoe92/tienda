@@ -6,6 +6,7 @@ const Products = [
         price: 20.00,
         image: `${process.env.PUBLIC_URL}/images/prod_2.png`,
         category: ['shoes', 'men'],
+        quantity: 1,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const Products = [
         discountPrice: 46.00,
         image: `${process.env.PUBLIC_URL}/images/prod_3.png`,
         category: ['shoes', 'women'],
+        quantity: 1,
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const Products = [
         discountPrice: 46.00,
         image: `${process.env.PUBLIC_URL}/images/model_5.png`,
         category: 'men',
+        quantity: 1,
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ const Products = [
         price: 28.00,
         discountPrice: 46.00,
         image: `${process.env.PUBLIC_URL}/images/prod_1.png`,
-        category: ['women', 'handbags']
+        category: ['women', 'handbags'],
+        quantity: 1,
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ const Products = [
         discountPrice: 46.00,
         image: `${process.env.PUBLIC_URL}/images/model_1.png`,
         category: 'women',
+        quantity: 1,
     },
     {
         id: 6,
@@ -45,6 +50,7 @@ const Products = [
         price: 58.00,
         image: `${process.env.PUBLIC_URL}/images/model_7.png`,
         category: 'men',
+        quantity: 1,
     },
 ];
 

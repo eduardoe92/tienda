@@ -7,86 +7,81 @@ function CheckoutForm() {
                 <div className="row mb-5">
                     <div className="col-md-12">
                         <div className="border p-4 rounded" role="alert">
-                            Returning customer? <a href="#">Click here</a> to login
+                            ¿Ya tienes cuenta? <a href="/">Ingresa acá</a> a tu sesión.
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-6 mb-5 mb-md-0">
-                        <h2 className="h3 mb-3 text-black">Billing Details</h2>
+                        <h2 className="h3 mb-3 text-black">Detalles de Facturación</h2>
                         <div className="p-3 p-lg-5 border">
                             <div className="form-group">
-                                <label htmlFor="c_country" className="text-black">Country <span className="text-danger">*</span></label>
-                                <select id="c_country" className="form-control">
-                                    <option value="1">Select a country</option>
-                                    <option value="2">bangladesh</option>
-                                    <option value="3">Algeria</option>
-                                    <option value="4">Afghanistan</option>
-                                    <option value="5">Ghana</option>
-                                    <option value="6">Albania</option>
-                                    <option value="7">Bahrain</option>
-                                    <option value="8">Colombia</option>
-                                    <option value="9">Dominican Republic</option>
+                                <label htmlFor="c_country" className="text-black">País <span className="text-danger">*</span></label>
+                                <select id="c_country" className="form-control" placeholder='Seleccionar País'>
+                                    <option value="2">Argentina</option>
+                                    <option value="3">Bolivia</option>
+                                    <option value="4">Brasil</option>
+                                    <option value="5">Chile</option>
+                                    <option value="6">Colombia</option>
+                                    <option value="7">Ecuador</option>
+                                    <option value="8">Perú</option>
+                                    <option value="9">Paraguay</option>
+                                    <option value="9">Uruguay</option>
+                                    <option value="9">Venezuela</option>
+                                    <option value="10">Otro...</option>
                                 </select>
                             </div>
                             <div className="form-group row">
                                 <div className="col-md-6">
-                                    <label htmlFor="c_fname" className="text-black">First Name <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_fname" name="c_fname" />
+                                    <label htmlFor="c_fname" className="text-black">Nombre <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_fname" name="c_fname" placeholder='Nombre' />
                                 </div>
                                 <div className="col-md-6">
-                                    <label htmlFor="c_lname" className="text-black">Last Name <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_lname" name="c_lname" />
+                                    <label htmlFor="c_lname" className="text-black">Apellido <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_lname" name="c_lname" placeholder='Apellido' />
                                 </div>
                             </div>
 
                             <div className="form-group row">
                                 <div className="col-md-12">
-                                    <label htmlFor="c_companyname" className="text-black">Company Name </label>
-                                    <input type="text" className="form-control" id="c_companyname" name="c_companyname" />
-                                </div>
-                            </div>
-
-                            <div className="form-group row">
-                                <div className="col-md-12">
-                                    <label htmlFor="c_address" className="text-black">Address <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_address" name="c_address" placeholder="Street address" />
+                                    <label htmlFor="c_address" className="text-black">Dirección <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_address" name="c_address" placeholder="Calle" />
                                 </div>
                             </div>
 
                             <div className="form-group">
-                                <input type="text" className="form-control" placeholder="Apartment, suite, unit etc. (optional)" />
+                                <input type="text" className="form-control" placeholder="Número" />
                             </div>
 
                             <div className="form-group row">
                                 <div className="col-md-6">
-                                    <label htmlFor="c_state_country" className="text-black">State / Country <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_state_country" name="c_state_country" />
+                                    <label htmlFor="c_state_country" className="text-black"> Ciudad / Estado <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_state_country" name="c_state_country" placeholder='Ciudad / Estado' />
                                 </div>
                                 <div className="col-md-6">
-                                    <label htmlFor="c_postal_zip" className="text-black">Posta / Zip <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_postal_zip" name="c_postal_zip" />
+                                    <label htmlFor="c_postal_zip" className="text-black">Código Postal <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_postal_zip" name="Código Postal" placeholder='Código Postal' />
                                 </div>
                             </div>
 
                             <div className="form-group row mb-5">
                                 <div className="col-md-6">
-                                    <label htmlFor="c_email_address" className="text-black">Email Address <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_email_address" name="c_email_address" />
+                                    <label htmlFor="c_email_address" className="text-black">Email <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_email_address" name="c_email_address" placeholder='Email' />
                                 </div>
                                 <div className="col-md-6">
-                                    <label htmlFor="c_phone" className="text-black">Phone <span className="text-danger">*</span></label>
-                                    <input type="text" className="form-control" id="c_phone" name="c_phone" placeholder="Phone Number" />
+                                    <label htmlFor="c_phone" className="text-black">Teléfono <span className="text-danger">*</span></label>
+                                    <input type="text" className="form-control" id="c_phone" name="c_phone" placeholder="Teléfono" />
                                 </div>
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="c_create_account" className="text-black" data-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1" id="c_create_account" /> Create an account?</label>
+                                <label htmlFor="c_create_account" className="text-black" data-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1" id="c_create_account" /> ¿Quieres crear una cuenta?</label>
                                 <div className="collapse" id="create_an_account">
                                     <div className="py-2">
-                                        <p className="mb-3">Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                                        {/* <p className="mb-3">¡REGISTRATE!</p> */}
                                         <div className="form-group">
-                                            <label htmlFor="c_account_password" className="text-black">Account Password</label>
+                                            <label htmlFor="c_account_password" className="text-black">Ingresa contraseña</label>
                                             <input type="email" className="form-control" id="c_account_password" name="c_account_password" placeholder="" />
                                         </div>
                                     </div>
@@ -94,15 +89,14 @@ function CheckoutForm() {
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="c_ship_different_address" className="text-black" data-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address"><input type="checkbox" value="1" id="c_ship_different_address" /> Ship To A Different Address?</label>
+                                <label htmlFor="c_ship_different_address" className="text-black" data-toggle="collapse" href="#ship_different_address" role="button" aria-expanded="false" aria-controls="ship_different_address"><input type="checkbox" value="1" id="c_ship_different_address" /> ¿Necesitas enviarlo a otra dirección?</label>
                                 <div className="collapse" id="ship_different_address">
                                     <div className="py-2">
 
                                         <div className="form-group">
-                                            <label htmlFor="c_diff_country" className="text-black">Country <span className="text-danger">*</span></label>
-                                            <select id="c_diff_country" className="form-control">
-                                                <option value="1">Select a country</option>
-                                                <option value="2">Argentina</option>
+                                            <label htmlFor="c_diff_country" className="text-black"> País <span className="text-danger">*</span></label>
+                                            <select id="c_diff_country" className="form-control" placeholder='Seleccionar País'>
+                                                <option value="1">Argentina</option>
                                                 <option value="3">Bolivia</option>
                                                 <option value="4">Brasil</option>
                                                 <option value="5">Chile</option>
@@ -112,57 +106,51 @@ function CheckoutForm() {
                                                 <option value="9">Paraguay</option>
                                                 <option value="9">Uruguay</option>
                                                 <option value="9">Venezuela</option>
+                                                <option value="10">Otro...</option>
                                             </select>
                                         </div>
 
                                         <div className="form-group row">
                                             <div className="col-md-6">
-                                                <label htmlFor="c_diff_fname" className="text-black">First Name <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_fname" name="c_diff_fname" />
+                                                <label htmlFor="c_fname" className="text-black">Nombre <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_fname" name="c_fname" placeholder='Nombre' />
                                             </div>
                                             <div className="col-md-6">
-                                                <label htmlFor="c_diff_lname" className="text-black">Last Name <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_lname" name="c_diff_lname" />
+                                                <label htmlFor="c_lname" className="text-black">Apellido <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_lname" name="c_lname" placeholder='Apellido' />
                                             </div>
                                         </div>
 
                                         <div className="form-group row">
                                             <div className="col-md-12">
-                                                <label htmlFor="c_diff_companyname" className="text-black">Company Name </label>
-                                                <input type="text" className="form-control" id="c_diff_companyname" name="c_diff_companyname" />
-                                            </div>
-                                        </div>
-
-                                        <div className="form-group row">
-                                            <div className="col-md-12">
-                                                <label htmlFor="c_diff_address" className="text-black">Address <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_address" name="c_diff_address" placeholder="Street address" />
+                                                <label htmlFor="c_address" className="text-black">Dirección <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_address" name="c_address" placeholder="Calle" />
                                             </div>
                                         </div>
 
                                         <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Apartment, suite, unit etc. (optional)" />
+                                            <input type="text" className="form-control" placeholder="Número" />
                                         </div>
 
                                         <div className="form-group row">
                                             <div className="col-md-6">
-                                                <label htmlFor="c_diff_state_country" className="text-black">State / Country <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_state_country" name="c_diff_state_country" />
+                                                <label htmlFor="c_state_country" className="text-black"> Ciudad / Estado <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_state_country" name="c_state_country" placeholder='Ciudad / Estado' />
                                             </div>
                                             <div className="col-md-6">
-                                                <label htmlFor="c_diff_postal_zip" className="text-black">Posta / Zip <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_postal_zip" name="c_diff_postal_zip" />
+                                                <label htmlFor="c_postal_zip" className="text-black">Código Postal <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_postal_zip" name="Código Postal" placeholder='Código Postal' />
                                             </div>
                                         </div>
 
                                         <div className="form-group row mb-5">
                                             <div className="col-md-6">
-                                                <label htmlFor="c_diff_email_address" className="text-black">Email Address <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_email_address" name="c_diff_email_address" />
+                                                <label htmlFor="c_email_address" className="text-black">Email <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_email_address" name="c_email_address" placeholder='Email' />
                                             </div>
                                             <div className="col-md-6">
-                                                <label htmlFor="c_diff_phone" className="text-black">Phone <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="c_diff_phone" name="c_diff_phone" placeholder="Phone Number" />
+                                                <label htmlFor="c_phone" className="text-black">Teléfono <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" id="c_phone" name="c_phone" placeholder="Teléfono" />
                                             </div>
                                         </div>
 
@@ -172,15 +160,15 @@ function CheckoutForm() {
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="c_order_notes" className="text-black">Order Notes</label>
-                                <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" className="form-control" placeholder="Write your notes here..."></textarea>
+                                <label htmlFor="c_order_notes" className="text-black">Comentario</label>
+                                <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" className="form-control" placeholder="Ingresa tu comentario acá..."></textarea>
                             </div>
 
                         </div>
                     </div>
                     <div className="col-md-6">
 
-                        <div className="row mb-5">
+                        {/* <div className="row mb-5">
                             <div className="col-md-12">
                                 <h2 className="h3 mb-3 text-black">Coupon Code</h2>
                                 <div className="p-3 p-lg-5 border">
@@ -195,15 +183,15 @@ function CheckoutForm() {
 
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="row mb-5">
                             <div className="col-md-12">
-                                <h2 className="h3 mb-3 text-black">Your Order</h2>
+                                <h2 className="h3 mb-3 text-black">Tu compra</h2>
                                 <div className="p-3 p-lg-5 border">
                                     <table className="table site-block-order-table mb-5">
                                         <thead>
-                                            <th>Product</th>
+                                            <th>Producto</th>
                                             <th>Total</th>
                                         </thead>
                                         <tbody>
@@ -216,32 +204,32 @@ function CheckoutForm() {
                                                 <td>$100.00</td>
                                             </tr>
                                             <tr>
-                                                <td className="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
+                                                <td className="text-black font-weight-bold"><strong>Subtotal</strong></td>
                                                 <td className="text-black">$350.00</td>
                                             </tr>
                                             <tr>
-                                                <td className="text-black font-weight-bold"><strong>Order Total</strong></td>
+                                                <td className="text-black font-weight-bold"><strong>Total a Pagar</strong></td>
                                                 <td className="text-black font-weight-bold"><strong>$350.00</strong></td>
                                             </tr>
                                         </tbody>
                                     </table>
 
                                     <div className="border p-3">
-                                        <h3 className="h6 mb-0"><a className="d-block" data-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Direct Bank Transfer</a></h3>
+                                        <h3 className="h6 mb-0"><a className="d-block" data-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Transferencia Bancaria</a></h3>
 
                                         <div className="collapse" id="collapsebank">
                                             <div className="py-2">
-                                                <p className="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                <p className="mb-0">Realice su pago directamente en nuestra cuenta bancaria. Utilice su ID de pedido como referencia de pago. Su pedido no se enviará hasta que los fondos se hayan liquidado en nuestra cuenta.</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="border p-3">
-                                        <h3 className="h6 mb-0"><a className="d-block" data-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">Cheque Payment</a></h3>
+                                        <h3 className="h6 mb-0"><a className="d-block" data-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">Pago con Checke</a></h3>
 
                                         <div className="collapse" id="collapsecheque">
                                             <div className="py-2">
-                                                <p className="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                <p className="mb-0">Realice su pago directamente en nuestra cuenta bancaria. Utilice su ID de pedido como referencia de pago. Su pedido no se enviará hasta que los fondos se hayan liquidado en nuestra cuenta.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -251,13 +239,13 @@ function CheckoutForm() {
 
                                         <div className="collapse" id="collapsepaypal">
                                             <div className="py-2">
-                                                <p className="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                <p className="mb-0">Realice su pago directamente en nuestra cuenta bancaria. Utilice su ID de pedido como referencia de pago. Su pedido no se enviará hasta que los fondos se hayan liquidado en nuestra cuenta.</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="form-group mt-4">
-                                        <button className="btn btn-primary btn-lg btn-block" onClick={() => window.location = 'thankyou.html'}>Place Order</button>
+                                        <button className="btn btn-primary btn-lg btn-block" onClick={() => window.location = 'thankyou.html'}>Realizar Pedido</button>
                                     </div>
 
                                 </div>

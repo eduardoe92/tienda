@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../App';
 import './Shop.css';
+import { Link } from 'react-router-dom';
 
 const ShoppingCart = () => {
     const { cart, setCart, removeFromCart } = useContext(CartContext); // Usar el contexto para obtener el carrito
@@ -98,7 +99,7 @@ const ShoppingCart = () => {
                                                                 <div className="input-group-prepend">
                                                                     <button onClick={() => decreaseQuantity(product.id)} className="btn btn-outline-primary js-btn-minus" type="button">-</button>
                                                                 </div>
-                                                                <input type="text" className="form-control text-center" value={product.quantity} readOnly />
+                                                                <input type="text" className="form-control text-center" value= {product.quantity} readOnly />
                                                                 <div className="input-group-append">
                                                                     <button onClick={() => increaseQuantity(product.id)} className="btn btn-outline-primary js-btn-plus" type="button">+</button>
                                                                 </div>
@@ -124,11 +125,9 @@ const ShoppingCart = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="row mb-5">
-                                    {/* <div className="col-md-6 mb-3 mb-md-0">
-                                        <button onClick={applyDiscount} className="btn btn-primary btn-sm btn-block">Aplicar descuento</button>
-                                    </div> */}
                                     <div className="col-md-6">
-                                        <button className="btn btn-outline-primary btn-sm btn-block">Seguir comprando</button>
+                                        <button className="btn btn-outline-primary btn-sm btn-block">
+                                        <Link to="/">Seguir comprando</Link></button>
                                     </div>
                                 </div>
                                 <div className="row">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Products from './Products';
+import { Link } from 'react-router-dom';
 
 const PopularProducts = ({ addToCart }) => {
     const popularProducts = Products.slice(0, 6);
@@ -15,12 +16,14 @@ const PopularProducts = ({ addToCart }) => {
                 <div className="row">
                     {popularProducts.map((product) => (
                         <div key={product.id} className="col-lg-4 col-md-6 item-entry mb-4">
-                            <a href="/" className="product-item md-height bg-gray d-block">
+                            <Link to={`/product/${product.id}`} className="product-item md-height bg-gray d-block">
                                 <img src={product.image} alt="ImageProduct" className="img-fluid" />
-                            </a>
+                            </Link>
                             <div className="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h2 className="item-title"><a href="/">{product.name}</a></h2>
+                                    <Link to={`/product/${product.id}`}>
+                                        <h2 className="item-title"><a href="/">{product.name}</a></h2>
+                                    </Link>
                                     {product.discountPrice ? (
                                         <strong className="item-price">
                                             <del>${product.discountPrice.toFixed(2)}</del> ${product.price.toFixed(2)}

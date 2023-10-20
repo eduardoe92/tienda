@@ -9,6 +9,7 @@ import CheckoutForm from './components/Checkout';
 import CategoryPage from './components/CategoryPage';
 import { CartProvider } from './components/CartContext';
 import ScrollToTop from './components/Helpers';
+import DetailsProduct from './components/DetailsProduct';
 
 export const CartContext = createContext();
 
@@ -25,7 +26,7 @@ function App() {
     <div>
       <CartProvider>
         <CartContext.Provider value={{ cart, addToCart }}>
-          <ScrollToTop/>
+          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route exact path={"/"} element={<Index cart={cart} addToCart={addToCart} />} />
@@ -33,6 +34,7 @@ function App() {
             <Route path={"/shopping"} element={<ShoppingCart />} />
             <Route path={"/checkout"} element={<CheckoutForm />} />
             <Route path={"/categoria/:category"} element={<CategoryPage />} />
+            <Route path={"/product/:id"} element={<DetailsProduct />} />
           </Routes>
           <Footer />
         </CartContext.Provider>
